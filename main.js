@@ -24,3 +24,8 @@ function loginValidate() {
         console.error("An error occurred during login validation:", error);
     }
   }
+
+
+  /* if (accesToken) {
+    window.location.href = "path/to/mainPage.html";
+  } */
