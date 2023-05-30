@@ -18,8 +18,5 @@
   "bugs": {
     "url": "https://github.com/seiferdisast/contableSoftware/issues"
   },
-  "homepage": "https://github.com/seiferdisast/contableSoftware#readme",
-  "dependencies": {
-    "firebase": "^9.22.1"
-  }
+  "homepage": "https://github.com/seiferdisast/contableSoftware#readme"
 }
