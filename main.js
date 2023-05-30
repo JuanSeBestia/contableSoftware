@@ -1,7 +1,3 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBiyyE9lWDPovrj6Cx_ugiYuCrGPtxBG0I",
@@ -13,10 +9,8 @@ const firebaseConfig = {
     measurementId: "G-SFB3E82QKR"
 };
 
-firebase.initializeApp(firebaseConfig);
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const app = firebase.initializeApp(firebaseConfig);
+const analytics = firebase.analytics();
 
 
 const userLogin = document.querySelector('#userLogin');
@@ -38,7 +32,7 @@ function loginValidate(event) {
     console.log("aqui entro a mi funcion validate");
 
     firebase.auth().signInWithEmailAndPassword(loginVal, passVal)
-    console.log("aqui entro al siguedin sera que lo valido?").then((userCredential) => {
+    .then((userCredential) => {
         console.log("aqui ya valido el correo y pass");
         const user = userCredential.user;
         console.log("User Auth: ", user);
